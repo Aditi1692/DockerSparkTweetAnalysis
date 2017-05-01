@@ -74,4 +74,4 @@ If you find any issues or would like to discuss further, please ping me on my Tw
 
 ## License [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright &copy; 2016 Prashanth Babu.<br>
-Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).# Docker image for Tweet Analysis using Spark

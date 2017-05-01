@@ -1,6 +1,6 @@
-FROM p7hb/p7hb-docker-spark:1.6.2
+FROM swiftdiaries/swiftdiaries-docker-spark-1.0
 
-MAINTAINER Prashanth Babu <Prashanth.Babu@gmail.com>
+MAINTAINER Adhita Selvaraj <adhita94@gmail.com>
 
 # Download and install all the required packages.
 RUN apt-get -yqq update && \
