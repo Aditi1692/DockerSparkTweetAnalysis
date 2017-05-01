@@ -29,7 +29,7 @@ fi
 service redis-server restart
 
 # Download, setup and configure code.
-CODE_FOLDER="/root/Tweet-Sentiment-Analysis"
+CODE_FOLDER="/root/TweetSentimentAnalysis"
 CODE_ZIP_FILE="/root/Tweet-Sentiment-Analysis.zip"
 if [ ! -d $CODE_FOLDER ]; then
     echo -e "\n**** Initiated download and extract of Tweet-Sentiment-Analysis source code from GitHub.com/P7h...... ****"
