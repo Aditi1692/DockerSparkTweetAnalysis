@@ -33,9 +33,9 @@ CODE_FOLDER="/root/Tweet-Sentiment-Analysis"
 CODE_ZIP_FILE="/root/Tweet-Sentiment-Analysis.zip"
 if [ ! -d $CODE_FOLDER ]; then
     echo -e "\n**** Initiated download and extract of Tweet-Sentiment-Analysis source code from GitHub.com/P7h...... ****"
-    wget --no-check-certificate 'https://github.com/swiftdiaries/TweetSentimentAnalysisSpark/archive/master.zip' -qO $CODE_ZIP_FILE
+    wget --no-check-certificate 'https://github.com/swiftdiaries/TweetSentimentAnalysisSpark.git' -qO $CODE_ZIP_FILE
     unzip -qq $CODE_ZIP_FILE
-    mv "$CODE_FOLDER-master" $CODE_FOLDER
+    mv "$CODE_FOLDER" $CODE_FOLDER
     rm -rf $CODE_ZIP_FILE
     echo -e "   **** Download and extract complete...... ****\n"
 else
