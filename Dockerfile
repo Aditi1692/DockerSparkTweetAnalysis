@@ -1,4 +1,4 @@
-FROM swiftdiaries/docker-spark
+FROM swiftdiaries/docker-spark:latest
 
 MAINTAINER Adhita Selvaraj <adhita94@gmail.com>
 

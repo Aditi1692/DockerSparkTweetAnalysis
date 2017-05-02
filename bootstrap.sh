@@ -18,7 +18,7 @@ if [ ! -d $TRAINING_DATA_FOLDER ]; then
     echo -e "   ****** Download complete...... ******\n"
 
     echo -e "***** Extracting Sentiment140 Training data...... *****"
-    unzip -qq $TRAINING_DATA_ZIP_FILE -d $TRAINING_DATA_FOLDER
+    unzip $TRAINING_DATA_ZIP_FILE -d $TRAINING_DATA_FOLDER
     rm -rf $TRAINING_DATA_ZIP_FILE
     echo -e "   ***** Extract complete...... *****\n"
 else
@@ -35,7 +35,7 @@ if [ ! -d $CODE_FOLDER ]; then
     echo -e "\n**** Initiated download and extract of Tweet-Sentiment-Analysis source code from GitHub.com/swiftdiaries...... ****"
     wget --no-check-certificate 'https://github.com/swiftdiaries/TweetSentimentAnalysisSpark.git' -qO $CODE_ZIP_FILE
     unzip -qq $CODE_ZIP_FILE
-    mv $CODE_ZIP_FILE"-master" $CODE_FOLDER
+    mv "$CODE_FOLDER-master" $CODE_FOLDER
     rm -rf $CODE_ZIP_FILE
     echo -e "   **** Download and extract complete...... ****\n"
 else
