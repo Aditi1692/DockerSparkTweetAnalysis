@@ -13,7 +13,7 @@ if [ ! -d $TRAINING_DATA_FOLDER ]; then
     mkdir -p $TRAINING_DATA_FOLDER
     TRAINING_DATA_ZIP_FILE="/root/trainingandtestdata.zip"
     # Sentiment140 website is a bit slow. So, instead retrieving the training data archive from another source.
-    wget 'http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip' -q0 $TRAINING_DATA_ZIP_FILE
+    wget -q 'http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip'
     # wget --no-check-certificate 'https://dl.dropboxusercontent.com/u/7113917/trainingandtestdata.zip' -qO $TRAINING_DATA_ZIP_FILE
     echo -e "   ****** Download complete...... ******\n"
 
@@ -35,6 +35,7 @@ if [ ! -d $CODE_FOLDER ]; then
     echo -e "\n**** Initiated download and extract of Tweet-Sentiment-Analysis source code from GitHub.com/swiftdiaries...... ****"
     wget --no-check-certificate 'https://github.com/swiftdiaries/TweetSentimentAnalysisSpark.git' -qO $CODE_ZIP_FILE
     unzip -qq $CODE_ZIP_FILE
+    mv $CODE_ZIP_FILE"-master" $CODE_FOLDER
     rm -rf $CODE_ZIP_FILE
     echo -e "   **** Download and extract complete...... ****\n"
 else

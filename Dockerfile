@@ -1,4 +1,4 @@
-FROM p7hb/p7hb-docker-spark:1.6.2
+FROM swiftdiaries/docker-spark
 
 MAINTAINER Adhita Selvaraj <adhita94@gmail.com>
 
