@@ -32,8 +32,9 @@ service redis-server restart
 CODE_FOLDER="/root/TweetSentimentAnalysisSpark"
 CODE_ZIP_FILE="/root/TweetSentimentAnalysisSpark.zip"
 if [ ! -d $CODE_FOLDER ]; then
+    mkdir -p $CODE_FOLDER
     echo -e "\n**** Initiated download and extract of Tweet-Sentiment-Analysis source code from GitHub.com/swiftdiaries...... ****"
-    wget --no-check-certificate 'https://github.com/swiftdiaries/TweetSentimentAnalysisSpark.git' -qO $CODE_ZIP_FILE
+    wget --no-check-certificate 'https://github.com/swiftdiaries/TweetSentimentAnalysisSpark/archive/master.zip' -qO $CODE_ZIP_FILE
     unzip -qq $CODE_ZIP_FILE
     mv "$CODE_FOLDER-master" $CODE_FOLDER
     rm -rf $CODE_ZIP_FILE
