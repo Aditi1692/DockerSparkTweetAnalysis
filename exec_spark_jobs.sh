@@ -1,9 +1,10 @@
 #! /bin/bash
 
 CODE_FOLDER="/root/TweetSentimentAnalysisSpark"
+FOLDER_NAME="TweetSentimentAnalysisSpark"
 cd $CODE_FOLDER/
 
-
+echo -e "--------------SBT Clean Assembly------------\n"
 # Initiate SBT build of the project.
 sbt error clean assembly
 
@@ -12,7 +13,8 @@ echo -e "***** Started Spark services...... *****\n"
 
 
 # Trigger Spark job for creating the Naive Bayes Model.
-cd $CODE_FOLDER/target/scala-2.11/
+echo -e "-----------------CD into target--------------\n"
+cd $FOLDER_NAME/target/scala-2.11/
 echo -e "\n\n***** Starting Naive Bayes Model creation of training data...... *****\n\n"
 spark-submit --class "SparkNaiveBayesModelCreator" --master spark://ip-172-31-5-231.us-east-2.compute.internal:7077 tweet-sentiment-analysis_2.11-0.1.jar
 echo -e "\n\n***** Naive Bayes Model creation of training data is complete...... *****\n\n"
