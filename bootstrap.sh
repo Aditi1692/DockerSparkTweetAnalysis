@@ -29,10 +29,10 @@ fi
 service redis-server restart
 
 # Download, setup and configure code.
-CODE_FOLDER="/root/TweetSentimentAnalysis"
-CODE_ZIP_FILE="/root/Tweet-Sentiment-Analysis.zip"
+CODE_FOLDER="/root/TweetSentimentAnalysisSpark"
+CODE_ZIP_FILE="/root/TweetSentimentAnalysisSpark.zip"
 if [ ! -d $CODE_FOLDER ]; then
-    echo -e "\n**** Initiated download and extract of Tweet-Sentiment-Analysis source code from GitHub.com/P7h...... ****"
+    echo -e "\n**** Initiated download and extract of Tweet-Sentiment-Analysis source code from GitHub.com/swiftdiaries...... ****"
     wget --no-check-certificate 'https://github.com/swiftdiaries/TweetSentimentAnalysisSpark.git' -qO $CODE_ZIP_FILE
     unzip -qq $CODE_ZIP_FILE
     mv "$CODE_FOLDER" $CODE_FOLDER

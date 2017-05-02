@@ -1,6 +1,6 @@
 #! /bin/bash
 
-CODE_FOLDER="/root/TweetSentimentAnalysis"
+CODE_FOLDER="/root/TweetSentimentAnalysisSpark"
 cd $CODE_FOLDER/
 
 
